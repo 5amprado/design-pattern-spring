@@ -24,6 +24,7 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<Cliente> inserir(@RequestBody Cliente cliente){
+        clienteService.inserir(cliente);
         return ResponseEntity.ok(cliente);
     }
 
